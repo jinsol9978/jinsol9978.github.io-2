@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Boston Ballet</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="페이지 제목" />
+        <meta property="og:description" content="페이지 설명" />
+        <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+        <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="페이지 제목" />
+        <meta name="twitter:description" content="페이지 설명" />
+        <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:domain" content="사이트 명" />
+        <!-- css -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!-- js -->
+        <!-- Swiper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script defer src="./assets/js/comm.js"></script>
+        <script defer src="./assets/js/main.js"></script>
+        <!-- defer 하단의 html 코드를 먼저 읽고 스크립트 적용 -->
+    </head>
+    <body>
+        <div id="u-skip">
+            <a href="#gnb">전체메뉴 바로가기</a>
+            <a href="#main">본문 바로가기</a>
+        </div>
+        <div id="wrap">
+            <!-- 60px 스크롤시 .active 추가 -->
+            <header id="header" class="">
+                <div class="container">
+                    <h1 id="logo">
+                        <a href="/">logo</a>
+                    </h1>
+                    <nav id="gnb">
+                        <input type="checkbox" name="btnMenu" id="btnMenu" class="blind" />
+                        <label for="btnMenu" class="label-menu">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="blind">전체메뉴 보기</span>
+                        </label>
+                        <div class="menu-wrap">
+                            <div class="m-util">
+                                <a href="#">로그인</a>
+                                <a href="#">회원가입</a>
+                                <a href="#">공지사항</a>
+                            </div>
+                            <div class="top-menu">
+                                <!-- mobile 메뉴 클릭시 .active 추가 -->
+                                <dl class="">
+                                    <dt>
+                                        <a href="./about.company.html">Tickets</a>
+                                    </dt>
+                                    <dd>
+                                        <a href="#">menu1-1</a>
+                                        <a href="#">menu1-2</a>
+                                        <a href="#">menu1-3</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#">ABOUT US</a>
+                                    </dt>
+                                    <dd>
+                                        <a href="#">Our People</a>
+                                        <a href="#">Our Company</a>
+                                        <a href="#">Join us</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#">SUPPORT</a>
+                                    </dt>
+                                    <dd>
+                                        <a href="#">menu3-1</a>
+                                        <a href="#">menu3-2</a>
+                                        <a href="#">menu3-3</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#">Education</a>
+                                    </dt>
+                                    <dd>
+                                        <a href="#">Ballet Programs</a>
+                                        <a href="#">Summer Programs</a>
+                                        <a href="#">Community Programs</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="util">
+                        <div class="lang">
+                            <a href="#" class="active">KOR</a>
+                            <a href="#">ENG</a>
+                        </div>
+                        <div class="search-area">
+                            <button class="btn-search">
+                                <i class="las la-search"></i>
+                                <span class="blind">검색창 열기</span>
+                            </button>
+                            <div class="layer-search dimmed">
+                                <div class="search-box">
+                                    <form class="form-search">
+                                        <input
+                                            type="search"
+                                            name="search"
+                                            id="search"
+                                            class="inp-search"
+                                            title="검색어를 입력하세요"
+                                            placeholder="검색어를 입력하세요"
+                                        />
+                                        <button type="submit" class="btn-submit">
+                                            <i class="las la-search"></i>
+                                            <span class="blind">검색</span>
+                                        </button>
+                                    </form>
+                                    <button class="btn-close">
+                                        <i class="las la-times"></i>
+                                        <span class="blind">검색창 닫기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Swiper -->
+            <div class="swiper slide-intro">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <!-- desktop -->
+                            <img src="images/Ballet.jpg" alt=""
+                                data-aos="fade-up"
+                                data-aos-offset="-100"
+                                data-aos-delay="50"
+                                media="(min-width: 1280px)"
+                            />
+                            <!-- mobile & tablet -->
+                            <source
+                                srcset="
+                                    ./images/Nutcracker_Header.jpg
+                                "
+                            />
+                            <img
+                                src="images/Nutcracker_Header.jpg"
+                                alt=""
+                            />
+                        </picture>
+                        <div class="slide-txt">
+                            <div class="container">
+                                <span>NEW LISTING</span><br />
+                                <strong
+                                    >The 
+                                    Nutcracker</strong
+                                >
+                                <p>Spring Experience opens May 9th. Use code SPRING 50%off tickets!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <img
+                                src="./images/RandJ_Header.jpg"
+                                alt="" 
+                                data-aos="fade-up"
+                                data-aos-offset="-100"
+                                data-aos-delay="50"/>
+                        </picture>
+                        <div class="slide-txt">
+                            <div class="container">
+                                <span>NEW LISTING</span><br />
+                                <strong>Boston Ballet</strong>
+                                <p>Spring Experience opens May 9th. Use code SPRING 50%off tickets!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <img
+                                src="images/Nutcracker_Header.jpg"
+                                alt="" data-aos="fade-up"
+                                data-aos-offset="-100"
+                                data-aos-delay="50"
+                            />
+                        </picture>
+                        <div class="slide-txt">
+                            <div class="container">
+                                <span>NEW LISTING</span> <br />
+                                <strong>The Nutcracker</strong >
+                                <p>Spring Experience opens May 9th. Use code SPRING 50%off tickets!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <section class="sec-type2 sec-2 bg-grey">
+                    <div class="container">
+                        <h2 class="sec-title">VISION & VALUE</h2>
+                        <div class="sec-content">We are Boston’s Ballet. We believe in the transformative power of dance to inspire positive change in our community and beyond. We step toward the future, where our art breaks down barriers, opens minds, strengthens 
+our connections to each other, and is shared more widely with all. <br /> 
+
+In 2024, The Boston Ballet will go further to move you beyond words with groundbreaking world premieres and classical masterpieces that illustrate our commitment to honouring ballet's history and exploring its exciting future.
+Because the future of dance is the future of humanity.
+</div>
+                        <a href="https://australianballet.com.au/whats-on" class="arrowed-link mt-4 md:mt-6 font-medium border-none">
+                            <br />
+Explore the season
+<i class="las la-arrow-right"></i>
+</a>
+                    </div>
+                </section>
+            
+            <main id="main">
+                <section class="sec-type1 sec-etf">
+                    <div class="container">
+                        <h2 class="sec-title">2024-2025 Season Performances</h2>
+                        <div class="sec-content">
+                            <div class="slide-etf">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">The Nutcracker</div>
+                                        <div class="swiper-slide">Swan Lake</div>
+                                        <div class="swiper-slide">Roméo et Juliette</div>
+                                        <div class="swiper-slide">Fall Experience 2024</div>
+                                        <div class="swiper-slide">Winter Experience 2025</div>
+                                        <div class="swiper-slide">Boston Ballet On Tour</div>
+                                    </div>
+                                    <!-- <div class="swiper-pagination"></div> -->
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <section class="mainsec ptn-sec">
+                    <div class="ptn-wrap">
+                        <div class="txt-wrap">
+                            <h2 class="tit">Partners</h2>
+                        </div>
+                        <div class="ptn-auto-scroll-wrap">
+                            <div id="ptn-splide-autoscroll" class="splide splide--loop splide--ltr splide--draggable is-active is-overflow is-initialized" role="region" aria-roledescription="carousel">
+                                <div class="splide__arrows splide__arrows--ltr">
+                                    <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide" aria-controls="ptn-splide-autoscroll-track">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                                            <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+                                        </svg></button><button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide" aria-controls="ptn-splide-autoscroll-track">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                                            <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="splide__track splide__track--loop splide__track--ltr splide__track--draggable" id="ptn-splide-autoscroll-track" style="padding-left: 0px; padding-right: 0px" aria-live="off" aria-atomic="true">
+                                    <ul class="splide__list" id="ptn-splide-autoscroll-list" role="presentation" style="transform: translateX(-7357.75px);">
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone01" role="tabpanel" aria-roledescription="slide" aria-label="2 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./images/BB_images_article_small_left_HistoryPages1950.jpg" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone02" role="tabpanel" aria-roledescription="slide" aria-label="3 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone is-active" id="ptn-splide-autoscroll-clone03" role="tabpanel" aria-roledescription="slide" aria-label="4 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone04" role="tabpanel" aria-roledescription="slide" aria-label="5 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone05" role="tabpanel" aria-roledescription="slide" aria-label="6 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone06" role="tabpanel" aria-roledescription="slide" aria-label="7 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone07" role="tabpanel" aria-roledescription="slide" aria-label="8 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone08" role="tabpanel" aria-roledescription="slide" aria-label="9 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img md" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone is-active" id="ptn-splide-autoscroll-clone01" role="tabpanel" aria-roledescription="slide" aria-label="2 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone02" role="tabpanel" aria-roledescription="slide" aria-label="3 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone03" role="tabpanel" aria-roledescription="slide" aria-label="4 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone04" role="tabpanel" aria-roledescription="slide" aria-label="5 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone05" role="tabpanel" aria-roledescription="slide" aria-label="6 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone06" role="tabpanel" aria-roledescription="slide" aria-label="7 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./g" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone07" role="tabpanel" aria-roledescription="slide" aria-label="8 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone is-visible" id="ptn-splide-autoscroll-clone08" role="tabpanel" aria-roledescription="slide" aria-label="9 of 9" style="margin-right: 400px; width: calc(25% - 300px)">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/"><img class="ptn-img md" src="./" alt=""></a>
+                                        </li><li class="splide__slide is-visible is-prev" id="ptn-splide-autoscroll-slide01" role="tabpanel" aria-roledescription="slide" aria-label="1 of 9" style="margin-right: 400px; width: calc(25% - 300px)">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/"><img class="ptn-img md" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide is-visible is-active" id="ptn-splide-autoscroll-slide02" role="tabpanel" aria-roledescription="slide" aria-label="2 of 9" style="margin-right: 400px; width: calc(25% - 300px)">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/"><img class="ptn-img" src="./images/" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide is-visible is-next" id="ptn-splide-autoscroll-slide03" role="tabpanel" aria-roledescription="slide" aria-label="3 of 9" style="margin-right: 400px; width: calc(25% - 300px)">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/"><img class="ptn-img" src="./images/" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide" id="ptn-splide-autoscroll-slide04" role="tabpanel" aria-roledescription="slide" aria-label="4 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./images/" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide" id="ptn-splide-autoscroll-slide05" role="tabpanel" aria-roledescription="slide" aria-label="5 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./images/" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide" id="ptn-splide-autoscroll-slide06" role="tabpanel" aria-roledescription="slide" aria-label="6 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./images/" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide" id="ptn-splide-autoscroll-slide07" role="tabpanel" aria-roledescription="slide" aria-label="7 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./images/" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide" id="ptn-splide-autoscroll-slide08" role="tabpanel" aria-roledescription="slide" aria-label="8 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide" id="ptn-splide-autoscroll-slide09" role="tabpanel" aria-roledescription="slide" aria-label="9 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img md" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone09" role="tabpanel" aria-roledescription="slide" aria-label="1 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img md" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone10" role="tabpanel" aria-roledescription="slide" aria-label="2 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone11" role="tabpanel" aria-roledescription="slide" aria-label="3 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone is-active" id="ptn-splide-autoscroll-clone12" role="tabpanel" aria-roledescription="slide" aria-label="4 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone13" role="tabpanel" aria-roledescription="slide" aria-label="5 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone14" role="tabpanel" aria-roledescription="slide" aria-label="6 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone15" role="tabpanel" aria-roledescription="slide" aria-label="7 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                        <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone16" role="tabpanel" aria-roledescription="slide" aria-label="8 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li>
+                                    <li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone09" role="tabpanel" aria-roledescription="slide" aria-label="1 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img md" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone is-active" id="ptn-splide-autoscroll-clone10" role="tabpanel" aria-roledescription="slide" aria-label="2 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone11" role="tabpanel" aria-roledescription="slide" aria-label="3 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone12" role="tabpanel" aria-roledescription="slide" aria-label="4 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone13" role="tabpanel" aria-roledescription="slide" aria-label="5 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone14" role="tabpanel" aria-roledescription="slide" aria-label="6 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img sm" src="./png" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone15" role="tabpanel" aria-roledescription="slide" aria-label="7 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li><li class="splide__slide splide__slide--clone" id="ptn-splide-autoscroll-clone16" role="tabpanel" aria-roledescription="slide" aria-label="8 of 9" style="margin-right: 400px; width: calc(25% - 300px)" aria-hidden="true">
+                                            <a href="https://chkim9910.github.io/KNB-Renewal/" tabindex="-1"><img class="ptn-img" src="./" alt=""></a>
+                                        </li></ul>
+                                </div>
+                                <ul class="splide__pagination splide__pagination--ltr" role="tablist" aria-label="Select a slide to show">
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide01" aria-label="Go to slide 1" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide02" aria-label="Go to slide 2" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide03" aria-label="Go to slide 3" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page is-active" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide04" aria-label="Go to slide 4" aria-selected="true"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide05" aria-label="Go to slide 5" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide06" aria-label="Go to slide 6" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide07" aria-label="Go to slide 7" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide08" aria-label="Go to slide 8" tabindex="-1"></button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide09" aria-label="Go to slide 9" tabindex="-1"></button>
+                                    </li>
+                                <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide01" aria-label="Go to slide 1" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page is-active" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide02" aria-label="Go to slide 2" aria-selected="true"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide03" aria-label="Go to slide 3" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide04" aria-label="Go to slide 4" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide05" aria-label="Go to slide 5" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide06" aria-label="Go to slide 6" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide07" aria-label="Go to slide 7" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide08" aria-label="Go to slide 8" tabindex="-1"></button></li><li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="ptn-splide-autoscroll-slide09" aria-label="Go to slide 9" tabindex="-1"></button></li></ul>
+                            </div>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var splide = new Splide('#ptn-splide-autoscroll', {
+                                    type: 'loop',
+                                    drag: 'free',
+                                    focus: 'center',
+                                    gap: '400px',
+                                    perPage: 4,
+                                    autoScroll: {
+                                        speed: 1,
+                                    },
+                                });
+                                splide.mount(window.splide.Extensions);
+                            });
+                        </script>
+                    </div>
+                </section>
+            <footer id="footer">
+<div class="footer_cont clearfix pc-foot container">
+<nav aria-label="Footer quicklinks navigation" class="md:flex justify-between">
+<ul class="pb-12 md:pb-0">
+<li class="pb-1 last:pb-0">
+<a href="https://australianballet.com.au/whats-on" class="arrowed-link text-24 tracking-widest text-white js-gtm" data-event="main_cta" data-cta="What's On" data-location="footer">
+What's On
+<i class="las la-arrow-right"></i>
+<path d="M12 3.984l8.016 8.016-8.016 8.016-1.406-1.406 5.578-5.625h-12.188v-1.969h12.188l-5.578-5.625z"></path>
+</svg>
+</a>
+</li>
+<li class="pb-1 last:pb-0">
+<a href="https://australianballet.com.au/season-packages" class="arrowed-link text-24 tracking-widest text-white js-gtm" data-event="main_cta" data-cta="2024 Season Packages" data-location="footer">
+2024 Season Packages
+<i class="las la-arrow-right"></i>
+<path d="M12 3.984l8.016 8.016-8.016 8.016-1.406-1.406 5.578-5.625h-12.188v-1.969h12.188l-5.578-5.625z"></path>
+</svg>
+</a>
+</li>
+<li class="pb-1 last:pb-0">
+<a href="https://www.bostonballet.org/home/support/donate/" class="arrowed-link text-24 tracking-widest text-white js-gtm" data-event="main_cta" data-cta="Donate" data-location="footer">
+Donate
+<i class="las la-arrow-right"></i>
+<path d="M12 3.984l8.016 8.016-8.016 8.016-1.406-1.406 5.578-5.625h-12.188v-1.969h12.188l-5.578-5.625z"></path>
+</svg>
+</a>
+</li>
+</ul>
+<div>
+<!-- <a class="btn btn-white  btn-inline js-gtm" target="" data-event="main_cta" data-cta="Contact" data-location="footer" href="https://australianballet.com.au/sign-up">Sign up</a> -->
+<a class="btn btn-white-ghost  btn-inline js-gtm" target="" data-event="main_cta" data-cta="Contact" data-location="footer" href="https://www.bostonballet.org/home/tickets-performances/footer-contact-us/">Contact</a>
+</div>
+</nav>
+<nav aria-label="Footer pages navigation" class="text-white pt-16 pb-12 text-12 tracking-widest leading-snug md:grid md:grid-cols-[2fr_1fr] lg:block xl:grid xl:grid-cols-[2fr_1fr]">
+<ul class="grid grid-cols-2 lg:grid-cols-4 ">
+<li class="pb-8">
+<a href="https://australianballet.com.au/whats-on" class="pb-3 md:pb-5 font-medium block js-gtm" data-event="footer_click" data-selection="What's On">What's On</a>
+<ul>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/whats-on#productions" class="js-gtm" data-event="footer_click" data-selection="Performances">
+Performances
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/whats-on#events-and-classes" class="js-gtm" data-event="footer_click" data-selection="Events &amp; Classes" aria-label="Events &amp; Classes what's on">
+Events &amp; Classes
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/events/studios" class="js-gtm" data-event="footer_click" data-selection="Studios">
+Studios
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/performances/live-on-ballet-tv" class="js-gtm" data-event="footer_click" data-selection="Livestream on Ballet TV">
+Livestream on Ballet TV
+</a>
+</li>
+</ul>
+</li>
+<li class="pb-8">
+<a href="https://australianballet.com.au/whats-on" class="pb-3 md:pb-5 font-medium block js-gtm" data-event="footer_click" data-selection="Discover">Discover</a>
+<ul>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://www.bostonballet.org/home/the-company/full-company/" class="js-gtm" data-event="footer_click" data-selection="Our Dancers">
+Our Dancers
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://www.bostonballet.org/story-category/music/" class="js-gtm" data-event="footer_click" data-selection="Music">
+Music
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/blog" class="js-gtm" data-event="footer_click" data-selection="Behind Ballet Blog">
+Behind Ballet Blog
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/ballet-tv" class="js-gtm" data-event="footer_click" data-selection="Ballet TV">
+Ballet TV
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://www.bostonballet.org/education/" class="js-gtm" data-event="footer_click" data-selection="Education">
+Education
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/shop" class="js-gtm" data-event="footer_click" data-selection="Shop">
+Shop
+</a>
+</li>
+</ul>
+</li>
+<li class="pb-8">
+<a href="https://australianballet.com.au/your-visit" class="pb-3 md:pb-5 font-medium block js-gtm" data-event="footer_click" data-selection="Your Visit">Your Visit</a>
+<ul>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/ballet-101/first-time" class="js-gtm" data-event="footer_click" data-selection="Going to the Ballet">
+Going to the Ballet
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/faq" class="js-gtm" data-event="footer_click" data-selection="Frequently Asked Questions">
+Frequently Asked Questions
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/policies" class="js-gtm" data-event="footer_click" data-selection="Policies">
+Policies
+</a>
+</li>
+</ul>
+</li>
+<li class="pb-8">
+<a href="https://australianballet.com.au/about-us" class="pb-3 md:pb-5 font-medium block js-gtm" data-event="footer_click" data-selection="About Us">About Us</a>
+<ul>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/support-us" class="js-gtm" data-event="footer_click" data-selection="Support Us">
+Support Us
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/about-us/careers" class="js-gtm" data-event="footer_click" data-selection="Careers">
+Careers
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/about-us/corporate-partnerships" class="js-gtm" data-event="footer_click" data-selection="Corporate Partnerships">
+Corporate Partnerships
+</a>
+</li>
+<li class="pb-1 last:pb-0 opacity-60">
+<a href="https://australianballet.com.au/media" class="js-gtm" data-event="footer_click" data-selection="Media">
+Media
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<div class="text-12 mt-8 grid grid-cols-2 md:mt-0 md:block lg:grid justify-self-end">
+<div class="self-center pr-8 md:mb-6 xl:self-start xl:justify-self-end ">
+<h4 class="font-medium tracking-widest mb-4">We acknowledge the traditional owners of the land across Boston</h4>
+</div>
+
+</div>
+</nav>
+<div class="md:flex items-center justify-between lg:grid lg:grid-cols-2 xl:grid-cols-[1fr_2fr]">
+<small class="text-white opacity-70 tracking-widest text-12 self-center"><span><sup>©</sup> Copyright 2024 The Boston Ballet</span></small>
+<ul class="flex items-center text-white mt-6 md:mt-0">
+<li class="mr-6 lg:mr-12 last:mr-0">
+<a target="_blank" href="https://www.instagram.com/ausballet" title="Go to instagram opens in new window">
+<svg aria-hidden="true" class="fill-current" width="20" height="20" viewBox="0 0 17 17">
+<path d="M14.9722 0.799805H2.52778C1.55 0.799805 0.75 1.5998 0.75 2.57758V15.022C0.75 16.0007 1.55 16.7998 2.52778 16.7998H14.9722C15.95 16.7998 16.75 16.0007 16.75 15.022V2.57758C16.75 1.5998 15.95 0.799805 14.9722 0.799805ZM8.73578 13.7091C10.0414 13.7089 11.2935 13.1901 12.2167 12.2667C13.1398 11.3434 13.6584 10.0912 13.6584 8.78558C13.6584 8.48514 13.6202 8.19536 13.5669 7.91092H14.9722V14.3251C14.9722 14.4059 14.9563 14.4859 14.9253 14.5605C14.8943 14.6351 14.8489 14.7028 14.7916 14.7598C14.7344 14.8168 14.6665 14.8619 14.5918 14.8926C14.517 14.9232 14.437 14.9388 14.3562 14.9385H3.14378C3.06301 14.9388 2.98297 14.9232 2.90825 14.8926C2.83353 14.8619 2.7656 14.8168 2.70836 14.7598C2.65112 14.7028 2.60571 14.6351 2.57472 14.5605C2.54373 14.4859 2.52778 14.4059 2.52778 14.3251V7.91092H3.90467C3.85044 8.19536 3.81222 8.48514 3.81222 8.78558C3.81246 10.0913 4.33126 11.3435 5.25456 12.2668C6.17785 13.1901 7.43004 13.7089 8.73578 13.7091ZM5.65933 8.78558C5.65933 8.38158 5.73891 7.98153 5.89351 7.60828C6.04812 7.23503 6.27473 6.89588 6.5604 6.61021C6.84608 6.32453 7.18522 6.09792 7.55847 5.94332C7.93173 5.78871 8.33177 5.70914 8.73578 5.70914C9.13978 5.70914 9.53983 5.78871 9.91308 5.94332C10.2863 6.09792 10.6255 6.32453 10.9112 6.61021C11.1968 6.89588 11.4234 7.23503 11.578 7.60828C11.7326 7.98153 11.8122 8.38158 11.8122 8.78558C11.8122 9.60151 11.4881 10.384 10.9112 10.961C10.3342 11.5379 9.5517 11.862 8.73578 11.862C7.91985 11.862 7.13735 11.5379 6.5604 10.961C5.98346 10.384 5.65933 9.60151 5.65933 8.78558ZM14.3562 5.24425H12.9207C12.7577 5.24378 12.6015 5.17882 12.4862 5.06357C12.371 4.94831 12.306 4.79213 12.3056 4.62914V3.1918C12.3056 2.85225 12.5811 2.57758 12.9198 2.57758H14.3553C14.6967 2.57758 14.9722 2.85225 14.9722 3.1918V4.62825C14.9722 4.96692 14.6967 5.24425 14.3562 5.24425Z"></path>
+</svg>
+</a>
+</li>
+<li class="mr-6 lg:mr-12 last:mr-0">
+<a target="_blank" href="https://www.facebook.com/theaustralianballet/" title="Go to facebook opens in new window">
+<svg aria-hidden="true" class="fill-current" width="20" height="20" viewBox="0 0 17 17">
+<path d="M14.7222 0.799805H2.27778C1.3 0.799805 0.5 1.5998 0.5 2.57758V15.022C0.5 16.0007 1.3 16.7998 2.27778 16.7998H8.5V10.5776H6.72222V8.37758H8.5V6.55536C8.5 4.6318 9.57733 3.28069 11.8476 3.28069L13.4502 3.28247V5.59803H12.3862C11.5027 5.59803 11.1667 6.26114 11.1667 6.87625V8.37847H13.4493L12.9444 10.5776H11.1667V16.7998H14.7222C15.7 16.7998 16.5 16.0007 16.5 15.022V2.57758C16.5 1.5998 15.7 0.799805 14.7222 0.799805Z"></path>
+</svg>
+</a>
+</li>
+<li class="mr-6 lg:mr-12 last:mr-0">
+<a target="_blank" href="https://www.tiktok.com/@ausballet" title="Go to tiktok opens in new window">
+<svg aria-hidden="true" class="fill-current" width="20" height="20" viewBox="0 0 15 17">
+<path d="M13.4475 3.85366C12.6297 3.67381 11.8899 3.23951 11.3342 2.61308C10.7785 1.98665 10.4355 1.20029 10.3545 0.366847V0.00585938H7.52406V11.2211C7.52464 11.7187 7.36862 12.2039 7.07811 12.608C6.78761 13.012 6.37734 13.3144 5.90542 13.4723C5.4335 13.6302 4.92385 13.6356 4.44868 13.4878C3.97351 13.34 3.55689 13.0464 3.25785 12.6486C2.98994 12.2965 2.82589 11.8765 2.78424 11.436C2.7426 10.9956 2.82503 10.5522 3.02221 10.1562C3.21939 9.7601 3.52345 9.42711 3.90001 9.19484C4.27657 8.96257 4.7106 8.8403 5.15303 8.84185C5.39772 8.84045 5.64118 8.87641 5.87501 8.9485V6.07701C5.6029 6.04331 5.32869 6.0296 5.05458 6.03599C4.04489 6.06297 3.06498 6.3838 2.23485 6.95919C1.40471 7.53458 0.760384 8.33956 0.380762 9.27556C0.00113935 10.2116 -0.0972987 11.2379 0.097502 12.229C0.292303 13.2201 0.771886 14.1329 1.47753 14.8556C2.20072 15.5908 3.12617 16.0945 4.13627 16.3026C5.14638 16.5107 6.19556 16.4139 7.15049 16.0243C8.10542 15.6348 8.923 14.9702 9.49934 14.1149C10.0757 13.2597 10.3848 12.2524 10.3874 11.2211V5.4781C11.5289 6.29356 12.8979 6.72978 14.3008 6.72515V3.9357C14.0252 3.93684 13.7503 3.90934 13.4804 3.85366H13.4475Z"></path>
+</svg>
+</a>
+</li>
+<li class="mr-6 lg:mr-12 last:mr-0">
+<a target="_blank" href="https://www.youtube.com/channel/UCqm4v0BLEyKnbY874F1h7fA" title="Go to youtube opens in new window">
+<svg aria-hidden="true" class="fill-current" width="20" height="20" viewBox="0 0 20 16">
+<path d="M10 0.0996094C0.172 0.0996094 0 0.973609 0 7.79961C0 14.6256 0.172 15.4996 10 15.4996C19.828 15.4996 20 14.6256 20 7.79961C20 0.973609 19.828 0.0996094 10 0.0996094ZM13.205 8.13361L8.715 10.2296C8.322 10.4116 8 10.2076 8 9.77361V5.82561C8 5.39261 8.322 5.18761 8.715 5.36961L13.205 7.46561C13.598 7.64961 13.598 7.94961 13.205 8.13361Z"></path>
+</svg>
+</a>
+</li>
+<li class="mr-6 lg:mr-12 last:mr-0">
+<a target="_blank" href="https://twitter.com/theausballet" title="Go to twitter opens in new window">
+<svg aria-hidden="true" class="fill-current" width="20" height="20" viewBox="0 0 17 14">
+<path d="M15.1117 3.53535C15.1187 3.67622 15.1213 3.81883 15.1213 3.9597C15.1213 8.29883 11.8196 13.3006 5.78217 13.3006C3.92739 13.3006 2.20304 12.7571 0.75 11.8249C1.60946 11.9289 2.48097 11.8624 3.31473 11.6293C4.14849 11.3963 4.92814 11.0012 5.60913 10.4667C4.92428 10.4537 4.26059 10.2271 3.71085 9.81844C3.16112 9.4098 2.75282 8.83959 2.54304 8.18753C3.03527 8.27958 3.54186 8.26026 4.02565 8.13101C3.28271 7.98036 2.6147 7.57747 2.13482 6.99063C1.65495 6.40378 1.39273 5.66907 1.39261 4.91101V4.87014C1.84843 5.1237 2.35823 5.26472 2.87957 5.28144C2.1838 4.8176 1.69128 4.10572 1.50254 3.2911C1.31379 2.47647 1.44304 1.62053 1.86391 0.897963C2.68808 1.91228 3.71639 2.74188 4.88207 3.33288C6.04774 3.92388 7.3247 4.26306 8.63 4.3284C8.57353 4.08285 8.54523 3.83166 8.54565 3.5797C8.54565 3.14878 8.63054 2.72208 8.79548 2.32397C8.96041 1.92586 9.20215 1.56414 9.5069 1.25947C9.81165 0.954801 10.1734 0.713152 10.5716 0.548324C10.9697 0.383496 11.3965 0.298718 11.8274 0.298832C12.2765 0.2981 12.7209 0.38965 13.1332 0.567803C13.5454 0.745955 13.9167 1.00691 14.2239 1.33448C14.9588 1.189 15.6636 0.919661 16.3083 0.537963C16.0631 1.29814 15.5501 1.94337 14.8648 2.35362C15.5154 2.27648 16.1509 2.10238 16.75 1.83709C16.3099 2.4966 15.755 3.0718 15.1117 3.53535Z"></path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+    </body>
+</html>
