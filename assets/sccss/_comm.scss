@@ -433,7 +433,120 @@
     flex: 1;
 }
 
+#main .inner {
+    height: 100%;
+    padding: 6.944vw 0;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.notice-sec {
+    margin-top: 90px;
+}
+.notice-sec .inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 103px;
+}
+.notice-sec .inner .txt-inner {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.notice-sec .inner .txt-inner h2 {
+    line-height: 1 !important;
+}
+.notice-sec .inner .arr-icon {
+    width: 47px;
+    vertical-align: text-bottom;
+}
+@media screen and (max-width: 1280px) {
+    .notice-sec .inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+.notice-sec .inner .txt-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.notice-sec .inner .txt-wrap em {
+    padding: 5px 0 24px 0;
+    white-space: nowrap;
+}
+.notice-sec .inner .txt-wrap .arr-icon {
+    width: 30px;
+    vertical-align: text-bottom;
+}
+.notice-sec .content {
+    color: #9e9e9e;
+}
+@media screen and (max-width: 768px) {
+    .notice-sec .inner .txt-wrap .arr-icon {
+        display: none;
+    }
+}
+
+.notice-wrap {
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .notice-wrap {
+        padding-left: 0px;
+    }
+}
+.notice-wrap li {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.notice-wrap li a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+    width: 100%;
+}
+.notice-wrap li :hover .noti-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+.notice-wrap .list-top {
+    border-top: 3px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.notice-wrap .list {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.notice-wrap .noti-box {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    flex: 1;
+}
+.notice-wrap .noti-icon {
+    background: url(../../images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
+    width: 0;
+    height: 0;
+    background-size: contain;
+    display: inline-block;
+    transition: all 0.3s ease-out;
+}
+.notice-wrap .noti-tit {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice-wrap .noti-date {
+    color: #616161;
+}
+
 // section
+
 .sec-type1,
 .sec-type2 {
     padding: 50px 0;
@@ -444,7 +557,7 @@
         text-align: center;
     }
 }
-@media screen and (min-width: $breakpoint-xl) {
+@media screen and (min-width: 1280px) {
     .sec-type1,
     .sec-type2 {
         padding: 150px 0;

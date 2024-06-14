@@ -125,3 +125,50 @@
         }
     }
 }
+
+// main
+.sec-etf {
+    overflow: hidden;
+}
+.slide-etf {
+    position: relative;
+    .swiper {
+        overflow: visible;
+        width: 85%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .swiper-slide {
+        height: 400px;
+        background: $gray-300;
+        border-radius: 20px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include flexCenter;
+        width: 80px;
+        height: 80px;
+        margin: 0;
+        background: rgba($primary, 0.5);
+        transform: translateY(-50%);
+        &::after {
+            transform: scale(0.8);
+        }
+    }
+    .swiper-button-prev {
+        left: -100px;
+    }
+    .swiper-button-next {
+        right: -100px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        .slide-eft .swiper {
+            width: 95%;
+        }
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+        .slide-eft .swiper {
+            width: 100%;
+        }
+    }
+}
