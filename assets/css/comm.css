@@ -1,0 +1,17 @@
+.ptn-sec {
+    height: 60vh;
+}
+@media screen and (max-width: 768px) {
+    .ptn-sec {
+        margin-top: 145px;
+    }
+}
+
+.ptn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ptn-wrap h2 {
+    padding: 50px;
+}
