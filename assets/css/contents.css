@@ -1,0 +1,35 @@
+/* ETF 뉴스 */
+.renew .etf-news.main-conts h2 {
+    text-align: left;
+}
+.renew .etf-news.main-conts .revenue-summary .btn-more {
+    top: 89px;
+}
+.renew .etf-news .tbl {
+    background-color: transparent;
+}
+.renew .etf-news .tbl thead + tbody tr:first-child {
+    border-top: 2px solid #222;
+}
+.renew .etf-news .tbl tbody tr td a {
+    color: #222;
+}
+.renew .etf-news .tbl tbody tr td {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    color: #74757e;
+}
+.renew .etf-news .tbl tbody tr td.txt-l {
+    padding-left: 30px;
+}
+.renew .etf-news .tbl tbody tr td.txt-l a {
+    font-size: 20px;
+}
+.renew .etf-news .tbl tbody tr:hover {
+    background-color: #fff;
+    box-shadow: 0px 12px 48px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+}
+.renew .etf-news .tbl tbody tr:hover a {
+    color: #1a399e;
+}
