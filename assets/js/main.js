@@ -1,5 +1,5 @@
 var swiper = new Swiper('.slide-intro', {
-    spaceBetween: 30,
+    spaceBetween: 0,
     centeredSlides: true,
     loop: true,
     // autoplay: {

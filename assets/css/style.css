@@ -329,12 +329,7 @@ legend {
 
 .swiper-button-next,
 .swiper-button-prev {
-  padding: 8px;
-  width: 12px;
-  height: 12px;
-  margin-top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
+  display: none;
 }
 
 .swiper-button-next::after,
