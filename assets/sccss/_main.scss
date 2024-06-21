@@ -1,5 +1,6 @@
 // slide-intro
 .slide-intro {
+    position: relative;
     .swiper-slide {
         position: relative;
         &.swiper-slide-active {
@@ -18,12 +19,12 @@
         transition: all 0.8s;
         width: 80%;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
         color: $white;
         span {
             padding: 3px 10px;
             font-size: 0.875em;
-            background: $primary;
+            background: $primary-50;
         }
         strong {
             display: block;
@@ -149,7 +150,7 @@
         width: 80px;
         height: 80px;
         margin: 0;
-        background: rgba($primary, 0.5);
+        background: rgba($white, 0.5);
         transform: translateY(-50%);
         &::after {
             transform: scale(0.8);

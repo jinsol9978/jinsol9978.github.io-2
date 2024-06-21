@@ -1,11 +1,12 @@
 :root {
-    --swiper-theme-color: #36c5f4;
+    --swiper-theme-color: #fff;
 }
 
 //사이트의 공통스타일을 정의합니다.
 // x축 그리드 정렬
 // mobile first
 .container {
+    width: 100%;
     padding: 0 20px;
     transition: all 0.3s;
 }
@@ -68,17 +69,13 @@
 .swiper-button-prev {
     display: none;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    color: #fff;
-    font-size: 12px;
-}
 @media screen and (min-width: $breakpoint-xl) {
     .swiper-button-next,
     .swiper-button-prev {
         display: block;
     }
 }
+
 // 버튼, 라디오 버튼, 체크박스
 // 인풋박스 // 카드디자인, 리스트 디자인
 // 공통 스타일을 정의
@@ -91,15 +88,12 @@
 
 // header
 #header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    &.active {
-        background: rgba(241, 243, 248, 0.3);
-        backdrop-filter: blur(30px);
-    }
+    background: rgba(0, 0, 0, 0.05);
     .container {
         @include flexSpaceBetween;
     }
@@ -108,35 +102,23 @@
             @include flexitems;
             height: $hdH;
             font-size: 1.4rem;
-        }
-    }
-}
-@media screen and (min-width: $breakpoint-xl) {
-    #header {
-        &.bg-w {
-            * {
-                color: $black;
-            }
-        }
-        * {
             color: $white;
         }
     }
-}
-#gnb {
-    display: flex;
-    .label-menu {
-        position: relative;
-        z-index: 1000;
-        transform: translateY(9px);
-        .bar {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background: $black;
-            margin: 5px 0;
-            border-radius: 3px;
-            transition: all 0.3s;
+    #gnb {
+        display: flex;
+        .label-menu {
+            position: relative;
+            z-index: 1000;
+            .bar {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background: $white;
+                margin: 5px 0;
+                border-radius: 3px;
+                transition: all 0.3s;
+            }
         }
     }
     // input이 체크되면
@@ -152,6 +134,7 @@
                     }
                     &:nth-child(3) {
                         transform: translateY(-8px) rotate(-45deg);
+                        background: $black;
                     }
                 }
             }
