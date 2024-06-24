@@ -173,3 +173,12 @@
         }
     }
 }
+.notice-wrap {
+    width: 100%;
+}
+.notice-item .title {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    overflow: -moz-hidden-unscrollable;
+}

@@ -420,10 +420,17 @@
 #main {
     flex: 1;
 }
-txt-ani-wrap yellow .inner {
+.list-item {
     display: flex;
-    overflow-x: hidden;
-    padding: 25px 0;
+    justify-content: space-between;
+    min-height: 7.5rem;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.list-container .notice-item .icon {
+    justify-content: space-between;
+    align-items: center;
 }
 .box {
     animation-name: main-marquee-ani;
