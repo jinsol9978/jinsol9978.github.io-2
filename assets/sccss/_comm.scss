@@ -437,7 +437,7 @@ txt-ani-wrap yellow .inner {
 }
 
 .yellow {
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(247, 247, 247);
 }
 .black {
     background-color: black;
@@ -555,6 +555,7 @@ txt-ani-wrap yellow .inner {
 .ptn-wrap h2 {
     padding: 50px;
 }
+
 .ptn-scroll {
     display: flex;
     height: 100px;
@@ -568,7 +569,7 @@ txt-ani-wrap yellow .inner {
     max-width: 100%;
 }
 .ptn-scroll .slide__track {
-    overflow: visible;
+    overflow: hidden;
 }
 .ptn-scroll .slide__slide {
     flex-grow: 1;
@@ -582,7 +583,7 @@ txt-ani-wrap yellow .inner {
 .ptn-scroll .slide .ptn-img {
     width: 150px;
     height: 100px;
-    -o-object-fit: contain;
+    // -o-object-fit: contain;
     object-fit: contain;
     filter: grayscale(100%) opacity(90%);
 }
@@ -621,7 +622,6 @@ footer {
             width: calc(100% - 156px);
             float: left;
             text-align: left;
-
             img {
                 width: 180px;
             }
@@ -643,7 +643,6 @@ footer {
                     }
                 }
             }
-
             .link_txt {
                 a {
                     font-size: 14px;
